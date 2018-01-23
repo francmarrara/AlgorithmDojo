@@ -1,0 +1,58 @@
+public class Nodo {
+	
+	private int key; //chiave univoca di Ricerca
+	private String name; // nome
+
+	private Nodo leftChild; // figlio sinistro
+	private Nodo rightChild; // figlio destro
+
+	public Nodo(int key, String name) { // costruttore
+
+		this.key = key;
+		this.name = name;
+
+	}
+
+	public int getKey() { //get key
+		return key;
+	}
+
+	public void setKey(int key) { //set key
+		this.key = key;
+	}
+
+	public String getName() {//get name
+		return name;
+	}
+
+	public void setName(String name) {//set name
+		this.name = name;
+	}
+
+	public String toString() {
+
+		return name + " has the key " + key;
+
+		/*
+		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +
+		 * "\nRight Child: " + rightChild + "\n";
+		 */
+
+	}
+
+	public Nodo getLeftChild() {//get figlio sin
+		return leftChild;
+	}
+
+	public void setLeftChild(Nodo leftChild) {//set figlio sin
+		this.leftChild = leftChild;
+	}
+
+	public Nodo getRightChild() {//get figlio dx
+		return rightChild;
+	}
+
+	public void setRightChild(Nodo rightChild) {//set figlio dx
+		this.rightChild = rightChild;
+	}
+}

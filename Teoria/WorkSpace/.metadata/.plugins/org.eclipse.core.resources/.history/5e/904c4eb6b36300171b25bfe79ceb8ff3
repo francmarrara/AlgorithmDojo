@@ -1,0 +1,12 @@
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleGraph;
+
+public class Main {
+public static void main(String[] args) {
+	SimpleGraph<Integer, DefaultEdge> g = new SimpleGraph<>(DefaultEdge.class);
+	DijkstraShortestPath<Integer, DefaultEdge> dj = new DijkstraShortestPath<>(g);
+	dj.getPath(source, sink)
+	
+}
+}

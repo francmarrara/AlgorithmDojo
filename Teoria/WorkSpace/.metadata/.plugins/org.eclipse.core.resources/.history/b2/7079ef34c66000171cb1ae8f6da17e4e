@@ -1,0 +1,37 @@
+
+public class Città {
+private String nome;
+private int priorità;
+private boolean hasSerbatoio;
+
+public Citta(String n, int num) {
+	// TODO Auto-generated method stub
+	setNome(n);
+	setPriorità(num);
+
+}
+
+public String getNome() {
+	return nome;
+}
+
+public void setNome(String nome) {
+	this.nome = nome;
+}
+
+public int getPriorità() {
+	return priorità;
+}
+
+public void setPriorità(int priorità) {
+	this.priorità = priorità;
+}
+
+public boolean isHasSerbatoio() {
+	return hasSerbatoio;
+}
+
+public void setHasSerbatoio(boolean hasSerbatoio) {
+	this.hasSerbatoio = hasSerbatoio;
+}
+}

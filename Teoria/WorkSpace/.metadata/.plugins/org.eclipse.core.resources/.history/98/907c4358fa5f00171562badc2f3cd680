@@ -1,0 +1,19 @@
+import java.util.Collection;
+import java.util.Set;
+
+import org.jgrapht.EdgeFactory;
+import org.jgrapht.graph.DefaultDirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.specifics.Specifics;
+
+public class StringGrafoOrientato extends DefaultDirectedGraph<String,DefaultEdge> {
+
+	
+	private static final long serialVersionUID = 1L;
+
+	public StringGrafoOrientato(EdgeFactory<String, DefaultEdge> ef) {
+		super(ef);
+		// TODO Auto-generated constructor stub
+	}
+
+}

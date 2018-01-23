@@ -1,0 +1,40 @@
+bool trovaCammMinGoloso(const Grafo& G, int start, int end, Vettore<bool>& visitato,	Lista<int>& cammino){
+	if (start==end){ 
+		visitato[end] =true; 
+  return true;
+	}
+	else{
+		visitato[start]=true;
+		bool trovato=false;
+		Lista<Arco> adOrd;
+		getAdiacentiPerPesoCrescente(G, start, adOrd);
+		Iteratore<Arco> it (adOrd);
+		it.VaiInTesta()
+		while (!it.isNull() && !trovato ){
+			Arco e = it.getCurrentValue();
+			if (!visitato[fin(e)]){
+				cammino.addInCoda(fin(e));
+				trovato=trovaCammMinGoloso(G, fin(e), end, visitato, cammino);
+				if (!trovato) 
+					cammino.delInCoda();
+			}
+			it.moveNext();
+		}
+		return trovato;
+	}
+}
+
+void getAdiacentiPerPesoCrescente (const Grafo& G, int start, Lista<Arco>& archiOrd)
+{
+	Iteratore<Arco> it (archiOrd);
+	for (Arco e=G.primoAd(start); !e.nullo(); e=G.succAd(e)){
+		it.VaiInTesta();
+		bool trovato = false;
+		while (!it.isNull() && !trovato)
+			if (it.getCurrentValue().peso()>e.peso())
+				trovato = true;
+			else
+				it.moveNext();
+		it.inserisciQui(e);
+	}
+}

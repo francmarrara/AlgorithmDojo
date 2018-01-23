@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.jgrapht.DirectedGraph;
+import org.jgrapht.alg.AllDirectedPaths;
+import org.jgrapht.alg.ConnectivityInspector;
+import org.jgrapht.alg.CycleDetector;
+import org.jgrapht.alg.cycle.HawickJamesSimpleCycles;
+import org.jgrapht.graph.DefaultDirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+
+@SuppressWarnings("deprecation")
+public class Test {
+
+	
+	
+	
+	
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		int nCittà;
+		int nSerbatoiMax;
+		nCittà = scanner.nextInt();
+		nSerbatoiMax = scanner.nextInt();
+		Città Vertex1;
+		Città Vertex2;
+		DefaultDirectedGraph<Città,DefaultEdge> g = new DefaultDirectedGraph<>(DefaultEdge.class);
+		int cont = 0;
+		while(cont<nCittà) {
+			
+			g.addVertex(new Città(scanner.next()));
+		
+			cont++;
+			
+		}
+
+		while (scanner.hasNext()) {
+			Vertex1 = new Città(scanner.next());
+			scanner.next();
+			Vertex2 = new Città(scanner.next());
+			g.addEdge(Vertex1, Vertex2);
+
+		}
+
+for(Città c : g.vertexSet()) {
+	c.setPunteggio(g.inDegreeOf(c)+g.outDegreeOf(c));
+}
+for(Città c : g.vertexSet()) {
+	System.out.println(c.getNome()+" "+c.getPunteggio());
+}
+
+	
+}
+	}

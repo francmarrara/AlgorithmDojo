@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.jgrapht.alg.AllDirectedPaths;
+import org.jgrapht.alg.ConnectivityInspector;
+import org.jgrapht.alg.CycleDetector;
+import org.jgrapht.alg.cycle.HawickJamesSimpleCycles;
+import org.jgrapht.graph.DefaultEdge;
+
+@SuppressWarnings("deprecation")
+public class Test {
+
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		int nCittà;
+		int nSerbatoiMax;
+		nCittà = scanner.nextInt();
+		nSerbatoiMax = scanner.nextInt();
+		String Vertex1;
+		String Vertex2;
+		StringGrafoOrientato g = new StringGrafoOrientato(DefaultEdge.class);
+		ArrayList<String> città = new ArrayList<String>();
+		int cont = 0;
+		while(cont<nCittà) {
+			String prova = scanner.next();
+			g.addVertex(prova);
+			città.add(prova);
+			cont++;
+			
+		}
+
+		while (scanner.hasNext()) {
+			Vertex1 = scanner.next();
+			scanner.next();
+			Vertex2 = scanner.next();
+			g.addEdge(Vertex1, Vertex2);
+
+		}
+		HashMap<String, Integer> Punteggi = new HashMap<String,Integer>();
+
+		ArrayList<String> cittàconSerbatoi = new ArrayList<String>();
+		
+int nCittàIsolate = 0;
+
+for(String c : città ) {
+
+	if((g.inDegreeOf(c)+g.outDegreeOf(c))==0)
+		nCittàIsolate++;
+
+	
+}
+
+System.out.println(nCittàIsolate);
+//verifico che il numero di città isolate non sia maggiore di k
+if(nCittàIsolate>nSerbatoiMax) {
+	System.out.println("TROPPI POCHI SERBATOI");
+	return;
+}
+
+
+	}
+	
+	
+	
+
+	
+}

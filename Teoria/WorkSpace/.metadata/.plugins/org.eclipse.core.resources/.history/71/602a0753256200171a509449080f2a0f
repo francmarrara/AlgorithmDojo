@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class DivCoins {
+	 class Problema {
+			private ArrayList<Integer> monete;
+			private int nMonete;
+
+			public Problema(int nM) {
+				// TODO Auto-generated constructor stub
+				monete = new ArrayList<Integer>();
+				setnMonete(nM);
+
+			}
+
+			public ArrayList<Integer> getMonete() {
+				return monete;
+			}
+
+			public void setMonete(ArrayList<Integer> monete) {
+				this.monete = monete;
+			}
+
+			public int getnMonete() {
+				return nMonete;
+			}
+
+			public void setnMonete(int nMonete) {
+				this.nMonete = nMonete;
+			}
+
+			public void DivEqua() {
+				Collections.sort(monete);
+				int cont = 1;
+				int contaPassi = 0;
+				int nPartenzaMonete = 0;
+				int MonetePersona1 = 0;
+				int MonetePersona2 = 0;
+				while (contaPassi < monete.size()) {
+					MonetePersona2 += monete.get(monete.size() - cont);
+					cont++;
+					contaPassi++;
+					while (MonetePersona1 < MonetePersona2 && contaPassi < monete.size()) {
+						MonetePersona1 += monete.get(nPartenzaMonete);
+						nPartenzaMonete++;
+						contaPassi++;
+
+					}
+
+				}
+
+				System.out.println(Math.abs(MonetePersona2 - MonetePersona1));
+
+			}
+
+		}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int nProblemi = scanner.nextInt();
+		int cont = 0;
+		ArrayList<Problema> problemi = new ArrayList<Problema>();
+
+		while (cont < nProblemi) {
+			Problema n = new Problema(scanner.nextInt());
+			int contaMonete = 0;
+			while (contaMonete < n.getnMonete()) {
+
+				n.getMonete().add(scanner.nextInt());
+				
+				contaMonete++;
+			}
+			cont++;
+			contaMonete = 0;
+		    problemi.add(n);
+		}
+
+	
+	for(Problema p : problemi) {
+		p.DivEqua();
+	}
+	
+	
+	
+	}
+}

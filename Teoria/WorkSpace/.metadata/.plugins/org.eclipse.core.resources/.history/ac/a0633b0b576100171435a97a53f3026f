@@ -1,0 +1,184 @@
+import java.util.EventListener;
+
+import javax.swing.event.TreeModelListener;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreeNode;
+import javax.swing.tree.TreePath;
+
+public class Tree extends DefaultTreeModel {
+
+	@Override
+	public void addTreeModelListener(TreeModelListener l) {
+		// TODO Auto-generated method stub
+		super.addTreeModelListener(l);
+	}
+
+	@Override
+	public boolean asksAllowsChildren() {
+		// TODO Auto-generated method stub
+		return super.asksAllowsChildren();
+	}
+
+	@Override
+	protected void fireTreeNodesChanged(Object source, Object[] path, int[] childIndices, Object[] children) {
+		// TODO Auto-generated method stub
+		super.fireTreeNodesChanged(source, path, childIndices, children);
+	}
+
+	@Override
+	protected void fireTreeNodesInserted(Object source, Object[] path, int[] childIndices, Object[] children) {
+		// TODO Auto-generated method stub
+		super.fireTreeNodesInserted(source, path, childIndices, children);
+	}
+
+	@Override
+	protected void fireTreeNodesRemoved(Object source, Object[] path, int[] childIndices, Object[] children) {
+		// TODO Auto-generated method stub
+		super.fireTreeNodesRemoved(source, path, childIndices, children);
+	}
+
+	@Override
+	protected void fireTreeStructureChanged(Object source, Object[] path, int[] childIndices, Object[] children) {
+		// TODO Auto-generated method stub
+		super.fireTreeStructureChanged(source, path, childIndices, children);
+	}
+
+	@Override
+	public Object getChild(Object parent, int index) {
+		// TODO Auto-generated method stub
+		return super.getChild(parent, index);
+	}
+
+	@Override
+	public int getChildCount(Object parent) {
+		// TODO Auto-generated method stub
+		return super.getChildCount(parent);
+	}
+
+	@Override
+	public int getIndexOfChild(Object parent, Object child) {
+		// TODO Auto-generated method stub
+		return super.getIndexOfChild(parent, child);
+	}
+
+	@Override
+	public <T extends EventListener> T[] getListeners(Class<T> listenerType) {
+		// TODO Auto-generated method stub
+		return super.getListeners(listenerType);
+	}
+
+	@Override
+	protected TreeNode[] getPathToRoot(TreeNode aNode, int depth) {
+		// TODO Auto-generated method stub
+		return super.getPathToRoot(aNode, depth);
+	}
+
+	@Override
+	public TreeNode[] getPathToRoot(TreeNode aNode) {
+		// TODO Auto-generated method stub
+		return super.getPathToRoot(aNode);
+	}
+
+	@Override
+	public Object getRoot() {
+		// TODO Auto-generated method stub
+		return super.getRoot();
+	}
+
+	@Override
+	public TreeModelListener[] getTreeModelListeners() {
+		// TODO Auto-generated method stub
+		return super.getTreeModelListeners();
+	}
+
+	@Override
+	public void insertNodeInto(MutableTreeNode newChild, MutableTreeNode parent, int index) {
+		// TODO Auto-generated method stub
+		super.insertNodeInto(newChild, parent, index);
+	}
+
+	@Override
+	public boolean isLeaf(Object node) {
+		// TODO Auto-generated method stub
+		return super.isLeaf(node);
+	}
+
+	@Override
+	public void nodeChanged(TreeNode node) {
+		// TODO Auto-generated method stub
+		super.nodeChanged(node);
+	}
+
+	@Override
+	public void nodeStructureChanged(TreeNode node) {
+		// TODO Auto-generated method stub
+		super.nodeStructureChanged(node);
+	}
+
+	@Override
+	public void nodesChanged(TreeNode node, int[] childIndices) {
+		// TODO Auto-generated method stub
+		super.nodesChanged(node, childIndices);
+	}
+
+	@Override
+	public void nodesWereInserted(TreeNode node, int[] childIndices) {
+		// TODO Auto-generated method stub
+		super.nodesWereInserted(node, childIndices);
+	}
+
+	@Override
+	public void nodesWereRemoved(TreeNode node, int[] childIndices, Object[] removedChildren) {
+		// TODO Auto-generated method stub
+		super.nodesWereRemoved(node, childIndices, removedChildren);
+	}
+
+	@Override
+	public void reload() {
+		// TODO Auto-generated method stub
+		super.reload();
+	}
+
+	@Override
+	public void reload(TreeNode node) {
+		// TODO Auto-generated method stub
+		super.reload(node);
+	}
+
+	@Override
+	public void removeNodeFromParent(MutableTreeNode node) {
+		// TODO Auto-generated method stub
+		super.removeNodeFromParent(node);
+	}
+
+	@Override
+	public void removeTreeModelListener(TreeModelListener l) {
+		// TODO Auto-generated method stub
+		super.removeTreeModelListener(l);
+	}
+
+	@Override
+	public void setAsksAllowsChildren(boolean newValue) {
+		// TODO Auto-generated method stub
+		super.setAsksAllowsChildren(newValue);
+	}
+
+	@Override
+	public void setRoot(TreeNode root) {
+		// TODO Auto-generated method stub
+		super.setRoot(root);
+	}
+
+	@Override
+	public void valueForPathChanged(TreePath path, Object newValue) {
+		// TODO Auto-generated method stub
+		super.valueForPathChanged(path, newValue);
+	}
+
+	public Tree(TreeNode arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+
+}

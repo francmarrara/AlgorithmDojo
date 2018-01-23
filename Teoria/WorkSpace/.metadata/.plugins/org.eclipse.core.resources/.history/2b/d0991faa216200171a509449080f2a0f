@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		monete = new ArrayList<Integer>();
+		setnMonete(nM);
+
+	}
+
+	public ArrayList<Integer> getMonete() {
+		return monete;
+	}
+
+	public void setMonete(ArrayList<Integer> monete) {
+		this.monete = monete;
+	}
+
+	public int getnMonete() {
+		return nMonete;
+	}
+
+	public void setnMonete(int nMonete) {
+		this.nMonete = nMonete;
+	}
+
+
+public void DivEqua() {
+	int Persona1 = 0;
+	int Persona2 =0;
+
+	Persona2+=monete.get(monete.size()-1);
+	
+	
+
+	
+
+}
+
+	
+
+	
+
+
+
+}

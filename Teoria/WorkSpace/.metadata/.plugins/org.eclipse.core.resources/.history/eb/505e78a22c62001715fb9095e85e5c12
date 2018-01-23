@@ -1,0 +1,80 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		monete = new ArrayList<Integer>();
+		setnMonete(nM);
+
+	}
+
+	public ArrayList<Integer> getMonete() {
+		return monete;
+	}
+
+	public void setMonete(ArrayList<Integer> monete) {
+		this.monete = monete;
+	}
+
+	public int getnMonete() {
+		return nMonete;
+	}
+
+	public void setnMonete(int nMonete) {
+		this.nMonete = nMonete;
+	}
+
+	public int DivEqua() {
+		Collections.sort(monete);
+		int cont = 1;
+		int contaPassi = 0;
+		int nPartenzaMonete = 0;
+		int MonetePersona1 = 0;
+		int MonetePersona2 = 0;
+		
+		Iterator<Integer> it = monete.iterator();
+		Iterator<Integer> it2=monete.iterator();
+		int prec,succ;
+		it2.next();
+		while(it.hasNext()&& it2.hasNext()) {
+		prec=it.next();
+		succ=it2.next();
+		if(prec==succ) {
+		MonetePersona1+=prec;
+		MonetePersona2+=succ;
+		System.out.println(it.getClass());
+		System.out.println(it2.getClass());
+		}
+		
+		
+		
+		}
+		
+		
+		
+		
+		
+		while (contaPassi < monete.size()) {
+			MonetePersona2 += monete.get(monete.size() - cont);
+			cont++;
+			contaPassi++;
+			while (MonetePersona1 < MonetePersona2 && contaPassi < monete.size()) {
+				MonetePersona1 += monete.get(nPartenzaMonete);
+				nPartenzaMonete++;
+				contaPassi++;
+
+			}
+
+		}
+
+		return Math.abs(MonetePersona2 - MonetePersona1);
+
+	}
+
+}

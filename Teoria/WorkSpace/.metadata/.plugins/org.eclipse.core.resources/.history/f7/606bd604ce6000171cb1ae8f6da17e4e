@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+
+import org.jgrapht.graph.DefaultEdge;
+
+public class Citt‡Serbatoi {
+	private ArrayList<Citt‡> citt‡;
+	private ArrayList<Citt‡> citt‡DaServire;
+	private StringGrafoOrientato g;
+	private int nCitt‡;
+	private int nSerbatoiMax;
+	
+public Citt‡Serbatoi() {
+	setCitt‡(new ArrayList<Citt‡>());
+	setCitt‡DaServire(new ArrayList<Citt‡>());
+	setG(new StringGrafoOrientato(DefaultEdge.class));
+
+}
+
+
+public ArrayList<Citt‡> getCitt‡DaServire() {
+	return citt‡DaServire;
+}
+
+
+public void setCitt‡DaServire(ArrayList<Citt‡> citt‡DaServire) {
+	this.citt‡DaServire = citt‡DaServire;
+}
+
+
+public ArrayList<Citt‡> getCitt‡() {
+	return citt‡;
+}
+
+
+public void setCitt‡(ArrayList<Citt‡> citt‡) {
+	this.citt‡ = citt‡;
+}
+
+
+public StringGrafoOrientato getG() {
+	return g;
+}
+
+
+public void setG(StringGrafoOrientato g) {
+	this.g = g;
+}
+
+
+public int getnCitt‡() {
+	return nCitt‡;
+}
+
+
+public void setnCitt‡(int nCitt‡) {
+	this.nCitt‡ = nCitt‡;
+}
+
+
+public int getnSerbatoiMax() {
+	return nSerbatoiMax;
+}
+
+
+public void setnSerbatoiMax(int nSerbatoiMax) {
+	this.nSerbatoiMax = nSerbatoiMax;
+}
+}

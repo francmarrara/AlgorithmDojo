@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		nMonete = nM;
+
+	}
+}

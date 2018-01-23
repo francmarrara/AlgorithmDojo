@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="CittàPunteggio"/>
+<fullyQualifiedTypeName name="org.jgrapht.graph.DefaultDirectedGraph"/>
+<fullyQualifiedTypeName name="org.jgrapht.DirectedGraph"/>
+<fullyQualifiedTypeName name="java.util.PrimitiveIterator"/>
+<fullyQualifiedTypeName name="StringGrafoOrientato"/>
+<fullyQualifiedTypeName name="CittàSerbatoi"/>
+<fullyQualifiedTypeName name="com.jgraph.components.labels.RichTextEditor"/>
+<fullyQualifiedTypeName name="org.jgrapht.graph.DefaultEdge"/>
+<fullyQualifiedTypeName name="Città"/>
+<fullyQualifiedTypeName name="BinaryTree"/>
+<fullyQualifiedTypeName name="Nodo"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="javax.swing.tree.TreeNode"/>
+<fullyQualifiedTypeName name="javax.swing.tree.DefaultTreeModel"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Tree"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="Node"/>
+<fullyQualifiedTypeName name="java.util.ListIterator"/>
+<fullyQualifiedTypeName name="Main.Tree"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="Problema"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+</qualifiedTypeNameHistroy>

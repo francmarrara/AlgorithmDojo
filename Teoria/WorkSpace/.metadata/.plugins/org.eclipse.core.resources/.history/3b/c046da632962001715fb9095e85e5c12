@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Vector;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class DivCoins {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int nProblemi = scanner.nextInt();
+		int cont = 0;
+		ArrayList<Problema> problemi = new ArrayList<Problema>();
+
+		while (cont < nProblemi) {
+			Problema n = new Problema(scanner.nextInt());
+			int contaMonete = 0;
+			while (contaMonete < n.getnMonete()) {
+
+				n.getMonete().add(scanner.nextInt());
+
+				contaMonete++;
+			}
+			cont++;
+			contaMonete = 0;
+			problemi.add(n);
+		}
+
+		for(int i =0)
+		
+
+	}
+}

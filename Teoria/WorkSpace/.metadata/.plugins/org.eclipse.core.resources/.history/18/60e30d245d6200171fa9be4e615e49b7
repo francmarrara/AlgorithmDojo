@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AltJ {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		//Liste di numeri
+		ArrayList<Integer> positivi = new ArrayList<Integer>();
+		ArrayList<Integer> negativi = new ArrayList<Integer>();
+        //inizio a leggere e memorizzare
+		
+		String s = scanner.next();
+		
+		while(!s.equals("<END>")) {
+		int n = Integer.parseInt(s);
+		
+		if(n<0) {
+			negativi.add(n); 
+			}
+		else {
+			positivi.add(n);
+		}
+		System.out.println(n);
+		s=scanner.next();
+		}
+		
+
+		System.out.println(positivi);
+		
+}
+}

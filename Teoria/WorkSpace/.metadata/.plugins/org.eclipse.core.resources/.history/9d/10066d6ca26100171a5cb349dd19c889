@@ -1,0 +1,261 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	 class Node<T> {
+
+		public T data;
+		public List<Node<T>> children;
+
+		/**
+		 * Costruttore di Default.
+		 */
+		public Node() {
+			super();
+		}
+
+		/**
+		 * Costuttore per creare un Node<T> con un'istanza T.
+		 * 
+		 * @param data
+		 *            an instance of T.
+		 */
+		public Node(T data) {
+			this();
+			setData(data);
+		}
+
+		/**
+		 * Return the children of Node<T>. The Tree<T> is represented by a single root
+		 * Node<T> whose children are represented by a List<Node<T>>. Each of these
+		 * Node<T> elements in the List can have children. The getChildren() method will
+		 * return the children of a Node<T>.
+		 * 
+		 * @return the children of Node<T>
+		 */
+		public List<Node<T>> getChildren() {
+			if (this.children == null) {
+				return new ArrayList<Node<T>>();
+			}
+			return this.children;
+		}
+
+		/**
+		 * Sets the children of a Node<T> object. See docs for getChildren() for more
+		 * information.
+		 * 
+		 * @param children
+		 *            the List<Node<T>> to set.
+		 */
+		public void setChildren(List<Node<T>> children) {
+			this.children = children;
+		}
+
+		/**
+		 * Returns the number of immediate children of this Node<T>.
+		 * 
+		 * @return the number of immediate children.
+		 */
+		public int getNumberOfChildren() {
+			if (children == null) {
+				return 0;
+			}
+			return children.size();
+		}
+
+		/**
+		 * Adds a child to the list of children for this Node<T>. The addition of the
+		 * first child will create a new List<Node<T>>.
+		 * 
+		 * @param child
+		 *            a Node<T> object to set.
+		 */
+		public void addChild(Node<T> child) {
+			if (children == null) {
+				children = new ArrayList<Node<T>>();
+			}
+			children.add(child);
+		}
+
+		/**
+		 * Inserts a Node<T> at the specified position in the child list. Will * throw
+		 * an ArrayIndexOutOfBoundsException if the index does not exist.
+		 * 
+		 * @param index
+		 *            the position to insert at.
+		 * @param child
+		 *            the Node<T> object to insert.
+		 * @throws IndexOutOfBoundsException
+		 *             if thrown.
+		 */
+		public void insertChildAt(int index, Node<T> child) throws IndexOutOfBoundsException {
+			if (index == getNumberOfChildren()) {
+				// this is really an append
+				addChild(child);
+				return;
+			} else {
+				children.get(index); // just to throw the exception, and stop here
+				children.add(index, child);
+			}
+		}
+
+		/**
+		 * Remove the Node<T> element at index index of the List<Node<T>>.
+		 * 
+		 * @param index
+		 *            the index of the element to delete.
+		 * @throws IndexOutOfBoundsException
+		 *             if thrown.
+		 */
+		public void removeChildAt(int index) throws IndexOutOfBoundsException {
+			children.remove(index);
+		}
+
+		public T getData() {
+			return this.data;
+		}
+
+		public void setData(T data) {
+			this.data = data;
+		}
+
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("{").append(getData().toString()).append(",[");
+			int i = 0;
+			for (Node<T> e : getChildren()) {
+				if (i > 0) {
+					sb.append(",");
+				}
+				sb.append(e.getData().toString());
+				i++;
+			}
+			sb.append("]").append("}");
+			return sb.toString();
+		}
+
+		public void removeChild(Node<T> node) {
+
+			children.remove(node);
+
+		}
+		
+		
+		
+
+	}
+	 
+	 class Tree<T> {
+		 
+		    private Node<T> rootElement;
+		     
+		    /**
+		     * Default ctor.
+		     */
+		    public Tree() {
+		        super();
+		    }
+		 
+		    /**
+		     * Return the root Node of the tree.
+		     * @return the root element.
+		     */
+		    public Node<T> getRootElement() {
+		        return this.rootElement;
+		    }
+		 
+		    /**
+		     * Set the root Element for the tree.
+		     * @param rootElement the root element to set.
+		     */
+		    public void setRootElement(Node<T> rootElement) {
+		        this.rootElement = rootElement;
+		    }
+		     
+		    /**
+		     * Returns the Tree<T> as a List of Node<T> objects. The elements of the
+		     * List are generated from a pre-order traversal of the tree.
+		     * @return a List<Node<T>>.
+		     */
+		    public List<Node<T>> toList() {
+		        List<Node<T>> list = new ArrayList<Node<T>>();
+		        walk(rootElement, list);
+		        return list;
+		    }
+		     
+		    /**
+		     * Returns a String representation of the Tree. The elements are generated
+		     * from a pre-order traversal of the Tree.
+		     * @return the String representation of the Tree.
+		     */
+		    public String toString() {
+		        return toList().toString();
+		    }
+		     
+		    /**
+		     * Walks the Tree in pre-order style. This is a recursive method, and is
+		     * called from the toList() method with the root element as the first
+		     * argument. It appends to the second argument, which is passed by reference     * as it recurses down the tree.
+		     * @param element the starting element.
+		     * @param list the output of the walk.
+		     */
+		    public void walk(Node<T> element, List<Node<T>> list) {
+		        list.add(element);
+		        for (Node<T> data : element.getChildren()) {
+		            walk(data, list);
+		        }
+		    }
+
+		    public int valorePercorso(Node<T> node, List<Node<T>> nodes) {
+				this.walk(node, nodes);
+				int val=0;
+				for(Node<T>n :nodes) {
+					val+=(int)n.getData();
+				}
+				val-=(int)node.getData();
+				return val;
+			}
+
+		/**
+		 * Represents a node of the Tree<T> class. The Node<T> is also a container, and
+		 * can be thought of as instrumentation to determine the location of the type T
+		 * in the Tree<T>.
+		 */
+		}
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Tree Tr = new Tree<>();
+		Node<Integer> N1 = new Node<>(scanner.nextInt());
+		Tr.setRootElement(N1);
+		
+		ArrayList<Node<Integer>>Nodi = new ArrayList<Node<Integer>>();
+		Nodi.add(N1);
+		
+		while(scanner.hasNext()) {
+		int Nodo1=scanner.nextInt();
+		if(Nodo1==-1)
+			break;
+		scanner.next();
+		int Nodo2 =scanner.nextInt();
+       scanner.next();
+		Node<Integer> Node = new Node<>(Nodo1);
+		
+		for(Node<Integer> n : Nodi) {
+			if(n.getData()==Nodo2) {
+				n.addChild(Node);
+			}
+			Nodi.add(Node);
+//CUNCURRENT
+		}
+			
+		
+		}
+   
+		
+		System.out.println(Tr.toString());
+
+}
+	}

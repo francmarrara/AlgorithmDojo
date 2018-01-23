@@ -1,0 +1,29 @@
+
+public class Citt‡Punteggio {
+	private String Citt‡;
+	private int Punteggio;
+
+	public Citt‡Punteggio(String n, int num) {
+		setCitt‡(n);
+		setPunteggio(num);
+
+	}
+
+	public String getCitt‡() {
+		return Citt‡;
+	}
+
+	public void setCitt‡(String citt‡) {
+		Citt‡ = citt‡;
+	}
+
+	public int getPunteggio() {
+		return Punteggio;
+	}
+
+	public void setPunteggio(int punteggio) {
+		Punteggio = punteggio;
+	}
+	
+	
+}

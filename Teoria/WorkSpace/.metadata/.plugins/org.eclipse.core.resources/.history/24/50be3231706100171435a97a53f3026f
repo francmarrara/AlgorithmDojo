@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Tree Tr = new Tree<>();
+		Node<Integer> N1 = new Node<>(scanner.nextInt());
+		Tr.setRootElement(N1);
+		
+		ArrayList<Node<Integer>>Nodi = new ArrayList<Node<Integer>>();
+		Nodi.add(N1);
+		
+		while(scanner.hasNext()) {
+		int Nodo1=scanner.nextInt();
+		if(Nodo1==-1)
+			break;
+		scanner.next();
+		int Nodo2 =scanner.nextInt();
+       scanner.next();
+		Node<Integer> Node = new Node<>(Nodo1);
+		
+		for(Node<Integer> n : Nodi) {
+			if(n.getData()==Nodo2) {
+				n.addChild(Node);
+			}
+			Nodi.add(Node);
+
+		}
+			
+		
+		}
+   
+		
+		System.out.println(Tr.toString());
+
+}
+	}

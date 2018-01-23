@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		monete = new ArrayList<Integer>();
+		setnMonete(nM);
+
+	}
+
+	public ArrayList<Integer> getMonete() {
+		return monete;
+	}
+
+	public void setMonete(ArrayList<Integer> monete) {
+		this.monete = monete;
+	}
+
+	public int getnMonete() {
+		return nMonete;
+	}
+
+	public void setnMonete(int nMonete) {
+		this.nMonete = nMonete;
+	}
+
+	public int DivEqua() {
+		Collections.sort(monete);
+		int cont = 1;
+		int contaPassi = 0;
+		int nPartenzaMonete = 0;
+		int MonetePersona1 = 0;
+		int MonetePersona2 = 0;
+		
+		for(int k=0;k<monete.size();k++) {
+		for(int i =0;i<monete.size();i++) {
+			for(int j =1;j<monete.size();j++) {
+				if(monete.get(i)==monete.get(j))
+					MonetePersona1+=monete.get(i);
+				    MonetePersona2+=monete.get(j);
+				    monete.remove(j);
+				    break;
+			}
+		    monete.remove(i);
+
+			break;
+			
+		}
+	
+		}
+	
+		
+		
+		
+		
+		while (contaPassi < monete.size()) {
+			MonetePersona2 += monete.get(monete.size() - cont);
+			cont++;
+			contaPassi++;
+			while (MonetePersona1 < MonetePersona2 && contaPassi < monete.size()) {
+				MonetePersona1 += monete.get(nPartenzaMonete);
+				nPartenzaMonete++;
+				contaPassi++;
+
+			}
+
+		}
+
+		return Math.abs(MonetePersona2 - MonetePersona1);
+
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+}

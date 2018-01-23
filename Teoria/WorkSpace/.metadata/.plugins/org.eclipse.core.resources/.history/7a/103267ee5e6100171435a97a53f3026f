@@ -1,0 +1,164 @@
+public class BinaryTree {
+
+	Nodo radice;
+
+	public void addNode(int key, String name) {
+
+		// Creo un nuovo Nodo e lo Inizializzo
+
+		Nodo newNode = new Nodo(key, name);
+
+		// Se non c'è una Radice, il nuovo nodo diventa Radice.
+
+		if (radice == null) {
+
+			radice = newNode;
+
+		} else {
+
+			//Imposta la radice come Nodo con il quale inizieremo 
+			//ad attraversare l'albero
+
+			Nodo focusNode = radice;
+
+			// Futuro genitore per il nostro nuovo nodo
+			
+			Nodo parent;
+			while (true) {
+
+				// La radice è il genitore più alto 
+				// e iniziamo da questo
+
+				parent = focusNode;
+				
+				//Controlliamo se il NewNode dovrebbe 
+				//andare sul lato sinistro del nodo padre
+
+
+				if (key < focusNode.getKey()) {
+
+					// Switch focus to the left child
+
+					focusNode = focusNode.getLeftChild();
+
+					// Se il figlio sx non ha figli
+
+					if (focusNode == null) {
+
+						// Piazziamo NewNode alla sua sx
+
+						parent.setLeftChild(newNode);
+						return; // All Done
+
+					}
+
+				} else { // Se arriviamo a questo punto mettiamo il nodo a dx
+
+					focusNode = focusNode.getRightChild();
+
+					// Se il figlio dx non ha figli
+
+					if (focusNode == null) {
+
+						// Piazziamo NewNode alla dx
+
+						parent.setRightChild(newNode);
+						return; // All Done
+
+					}
+
+				}
+
+			}
+		}
+
+	}
+
+	// Tutti i nodi vengono visitati in ordine crescente
+	// La ricorsione viene usata per passare a un nodo e
+	// poi vai ai suoi nodi figlio e così via
+
+	public void inOrderTraverseTree(Nodo focusNode) {
+
+		if (focusNode != null) {
+
+			// Attraverso il nodo sx
+
+			inOrderTraverseTree(focusNode.getLeftChild());
+
+			// Visit the currently focused on node
+
+			System.out.println(focusNode);
+
+			// Traverse the right node
+
+			inOrderTraverseTree(focusNode.getRightChild());
+
+		}
+
+	}
+
+	public void preorderTraverseTree(Nodo focusNode) {
+
+		if (focusNode != null) {
+
+			System.out.println(focusNode);
+
+			preorderTraverseTree(focusNode.getLeftChild());
+			preorderTraverseTree(focusNode.getRightChild());
+
+		}
+
+	}
+
+	public void postOrderTraverseTree(Nodo focusNode) {
+
+		if (focusNode != null) {
+
+			postOrderTraverseTree(focusNode.getLeftChild());
+			postOrderTraverseTree(focusNode.getRightChild());
+
+			System.out.println(focusNode);
+
+		}
+
+	}
+
+	public Nodo findNode(int key) {
+
+		// Start at the top of the tree
+
+		Nodo focusNode = radice;
+
+		// While we haven't found the Node
+		// keep looking
+
+		while (focusNode.getKey() != key) {
+
+			// If we should search to the left
+
+			if (key < focusNode.getKey()) {
+
+				// Shift the focus Node to the left child
+
+				focusNode = focusNode.getLeftChild();
+
+			} else {
+
+				// Shift the focus Node to the right child
+
+				focusNode = focusNode.getRightChild();
+
+			}
+
+			// The node wasn't found
+
+			if (focusNode == null)
+				return null;
+
+		}
+
+		return focusNode;
+
+	}
+}

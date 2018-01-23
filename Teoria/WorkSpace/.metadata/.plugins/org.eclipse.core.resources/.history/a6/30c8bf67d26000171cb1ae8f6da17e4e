@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+import com.jgraph.components.labels.RichTextEditor;
+
+public class Test {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Citt‡Serbatoi Cs = new Citt‡Serbatoi();
+		int cont = 0;
+		Cs.setnCitt‡(scanner.nextInt());
+		Cs.setnSerbatoiMax(scanner.nextInt());
+		while (cont < Cs.getnCitt‡()) {
+			Cs.getG().addVertex(scanner.next());
+			cont++;
+		}
+
+		while (scanner.hasNext()) {
+			String Vertex1 = scanner.next();
+			scanner.next();
+			String Vertex2 = scanner.next();
+			Cs.getG().addEdge(Vertex1, Vertex2);
+		}
+
+		//riempio le liste citt‡ e citt‡daservire
+		
+		Cs.riempiListe();
+		Cs.priorit‡Max();
+		Cs.serbatoiInScollegate();
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,120 @@
+30 8
+Volkhov
+Stadskanaal
+WestBloomfieldTownship
+Kikuchi
+Deoranian
+Whyalla
+Carrefour
+Sonbong
+Konstantinovsk
+Petlad
+QueenCreek
+Arteixo
+Dasna
+Harenkarspel
+SanLorenzodeElEscorial
+Vlaardingen
+Palwal
+Komaki
+Willetton
+Fornacelle
+Shahpur
+Uvarovo
+Plattsburgh
+Shizuishan
+SantaQuiteria
+Maputo
+SanAntoniodelosBanos
+Behshahr
+SanBartolomedeTirajana
+GreenacresCity
+Volkhov <-> SanBartolomedeTirajana
+Volkhov <-> WestBloomfieldTownship
+Volkhov <-> SanAntoniodelosBanos
+Volkhov <-> Dasna
+Volkhov <-> Willetton
+Stadskanaal <-> Palwal
+Stadskanaal <-> Kikuchi
+Stadskanaal <-> Shahpur
+Stadskanaal <-> Uvarovo
+Stadskanaal <-> Konstantinovsk
+Stadskanaal <-> QueenCreek
+Stadskanaal <-> Harenkarspel
+Stadskanaal <-> SanLorenzodeElEscorial
+WestBloomfieldTownship <-> Arteixo
+WestBloomfieldTownship <-> Carrefour
+Kikuchi <-> Willetton
+Kikuchi <-> Carrefour
+Kikuchi <-> Plattsburgh
+Kikuchi <-> Sonbong
+Kikuchi <-> SanBartolomedeTirajana
+Deoranian <-> Komaki
+Deoranian <-> Willetton
+Deoranian <-> Whyalla
+Deoranian <-> Sonbong
+Deoranian <-> QueenCreek
+Deoranian <-> Behshahr
+Deoranian <-> SanLorenzodeElEscorial
+Whyalla <-> Petlad
+Whyalla <-> SanLorenzodeElEscorial
+Carrefour <-> Fornacelle
+Carrefour <-> Shahpur
+Carrefour <-> Sonbong
+Carrefour <-> Konstantinovsk
+Carrefour <-> Shizuishan
+Carrefour <-> GreenacresCity
+Sonbong <-> Dasna
+Sonbong <-> SanLorenzodeElEscorial
+Konstantinovsk <-> Fornacelle
+Konstantinovsk <-> Plattsburgh
+Konstantinovsk <-> Maputo
+Konstantinovsk <-> Petlad
+Konstantinovsk <-> Dasna
+Konstantinovsk <-> Harenkarspel
+Petlad <-> GreenacresCity
+Petlad <-> QueenCreek
+Petlad <-> Arteixo
+Petlad <-> Dasna
+Petlad <-> SanAntoniodelosBanos
+Petlad <-> Vlaardingen
+QueenCreek <-> Harenkarspel
+QueenCreek <-> Plattsburgh
+Arteixo <-> Maputo
+Arteixo <-> SanAntoniodelosBanos
+Arteixo <-> Dasna
+Arteixo <-> SanLorenzodeElEscorial
+Dasna <-> Palwal
+Dasna <-> Willetton
+Harenkarspel <-> Willetton
+Harenkarspel <-> Behshahr
+Harenkarspel <-> GreenacresCity
+Harenkarspel <-> SanLorenzodeElEscorial
+SanLorenzodeElEscorial <-> Vlaardingen
+SanLorenzodeElEscorial <-> Willetton
+SanLorenzodeElEscorial <-> Shahpur
+SanLorenzodeElEscorial <-> Shizuishan
+SanLorenzodeElEscorial <-> Behshahr
+SanLorenzodeElEscorial <-> SanBartolomedeTirajana
+Vlaardingen <-> Fornacelle
+Palwal <-> Shizuishan
+Palwal <-> SanBartolomedeTirajana
+Palwal <-> Komaki
+Komaki <-> Maputo
+Komaki <-> Shizuishan
+Willetton <-> Fornacelle
+Willetton <-> GreenacresCity
+Fornacelle <-> Shahpur
+Fornacelle <-> SanBartolomedeTirajana
+Shahpur <-> Shizuishan
+Shahpur <-> Maputo
+Shahpur <-> SanAntoniodelosBanos
+Uvarovo <-> SanAntoniodelosBanos
+Uvarovo <-> SanBartolomedeTirajana
+Plattsburgh <-> SantaQuiteria
+Plattsburgh <-> SanAntoniodelosBanos
+Shizuishan <-> SantaQuiteria
+Shizuishan <-> SanBartolomedeTirajana
+Maputo <-> GreenacresCity
+Behshahr <-> SanBartolomedeTirajana
+SanBartolomedeTirajana <-> GreenacresCity

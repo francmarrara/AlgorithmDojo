@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		monete = new ArrayList<Integer>();
+		setnMonete(nM);
+
+	}
+
+	public ArrayList<Integer> getMonete() {
+		return monete;
+	}
+
+	public void setMonete(ArrayList<Integer> monete) {
+		this.monete = monete;
+	}
+
+	public int getnMonete() {
+		return nMonete;
+	}
+
+	public void setnMonete(int nMonete) {
+		this.nMonete = nMonete;
+	}
+
+
+public void DivEqua() {
+	Collections.sort(monete);
+	int cont=1;
+	int contaPassi=0;
+	int nPartenzaMonete=0;
+	int MonetePersona1=0;
+	int MonetePersona2=0;
+	while(contaPassi<monete.size()) {
+		MonetePersona2+=monete.size()-cont;
+		cont++;
+		contaPassi++;
+		while(MonetePersona1<MonetePersona2 && contaPassi<monete.size()) {
+			MonetePersona1+=monete.get(nPartenzaMonete);
+			nPartenzaMonete++;
+			contaPassi++;
+			
+			
+		}
+	
+System.out.println(Math.abs(MonetePersona2-MonetePersona1));
+
+	
+
+
+}
+	
+	
+	
+
+	
+
+}
+
+	
+
+	
+
+
+
+}

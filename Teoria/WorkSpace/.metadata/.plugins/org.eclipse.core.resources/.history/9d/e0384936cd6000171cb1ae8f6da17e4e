@@ -1,0 +1,80 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+import org.jgrapht.graph.DefaultEdge;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		int nCitt‡;
+		int nSerbatoiMax;
+		nCitt‡ = scanner.nextInt();
+		nSerbatoiMax = scanner.nextInt();
+		String Vertex1;
+		String Vertex2;
+		StringGrafoOrientato g = new StringGrafoOrientato(DefaultEdge.class);
+		int cont = 0;
+		while (cont < nCitt‡) {
+			g.addVertex(scanner.next());
+
+			cont++;
+
+		}
+
+		while (scanner.hasNext()) {
+			Vertex1 = scanner.next();
+			scanner.next();
+			Vertex2 = scanner.next();
+			g.addEdge(Vertex1, Vertex2);
+
+		}
+
+		ArrayList<Citt‡> citt‡ = new ArrayList<Citt‡>();
+
+		ArrayList<Citt‡> citt‡daServire = new ArrayList<Citt‡>();
+
+		for (String s : g.vertexSet()) {
+			Citt‡ cittadina = new Citt‡(s, g.inDegreeOf(s) + g.outDegreeOf(s));
+			citt‡.add(cittadina);
+			citt‡daServire.add(cittadina);
+
+		}
+		
+		int priorit‡Max=0;
+//elimino dalla lista delle citt‡ da servire quelle scollegate e vi piazzo un serbatoio
+		for (Citt‡ c : citt‡) {
+			if(c.getPriorit‡()>priorit‡Max)
+				priorit‡Max=c.getPriorit‡();
+			
+			
+			if (c.getPriorit‡() == 0) {
+				c.setHasSerbatoio(true);
+				citt‡daServire.remove(c);
+			}
+		}
+	
+		//servo la citt‡ con il max di collegamenti e rimuovo le citt‡ collegate
+		//
+		
+				
+			for(Citt‡ c : citt‡daServire) {
+				System.out.println(c.getNome());
+			}
+
+	}
+			
+		
+			
+		
+		}
+			
+			
+			
+			
+			
+			
+				
+		
+		

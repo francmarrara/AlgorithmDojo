@@ -1,0 +1,231 @@
+32 3
+Bettendorf
+Chinchon
+Sanand
+Surat
+Hautmont
+Tondano
+Leszno
+Bangarapet
+VillaCanales
+Baytown
+AlMahbulah
+Verona
+Kosaishi
+Baihar
+Tongelre
+Achhnera
+Malihabad
+Bielawa
+Villanueva
+RichmondHill
+IgaracudoTiete
+Aarschot
+SantoTomas
+KampungPasirGudangBaru
+Ljubljana
+Indergarh
+Bagasra
+Ciempozuelos
+Orvault
+SanAndres
+Karkala
+Yumbe
+Bettendorf <-> Chinchon
+Bettendorf <-> Sanand
+Bettendorf <-> Surat
+Bettendorf <-> Hautmont
+Bettendorf <-> Leszno
+Bettendorf <-> VillaCanales
+Bettendorf <-> Baytown
+Bettendorf <-> Verona
+Bettendorf <-> Kosaishi
+Bettendorf <-> Tongelre
+Bettendorf <-> Achhnera
+Bettendorf <-> Malihabad
+Bettendorf <-> Villanueva
+Bettendorf <-> RichmondHill
+Bettendorf <-> IgaracudoTiete
+Bettendorf <-> KampungPasirGudangBaru
+Bettendorf <-> Ljubljana
+Bettendorf <-> Bagasra
+Bettendorf <-> Ciempozuelos
+Bettendorf <-> Karkala
+Bettendorf <-> Yumbe
+Chinchon <-> Hautmont
+Chinchon <-> Bangarapet
+Chinchon <-> VillaCanales
+Chinchon <-> Baytown
+Chinchon <-> Verona
+Chinchon <-> Kosaishi
+Chinchon <-> Tongelre
+Chinchon <-> Achhnera
+Chinchon <-> Aarschot
+Chinchon <-> SantoTomas
+Chinchon <-> KampungPasirGudangBaru
+Chinchon <-> Ciempozuelos
+Chinchon <-> Orvault
+Chinchon <-> SanAndres
+Sanand <-> Bielawa
+Sanand <-> Villanueva
+Sanand <-> IgaracudoTiete
+Sanand <-> Leszno
+Sanand <-> Ljubljana
+Sanand <-> AlMahbulah
+Sanand <-> Ciempozuelos
+Sanand <-> Yumbe
+Surat <-> Malihabad
+Surat <-> Villanueva
+Surat <-> RichmondHill
+Surat <-> Tondano
+Surat <-> Leszno
+Surat <-> Bangarapet
+Surat <-> Baytown
+Surat <-> Bagasra
+Surat <-> KampungPasirGudangBaru
+Surat <-> Ciempozuelos
+Hautmont <-> Ciempozuelos
+Hautmont <-> Malihabad
+Hautmont <-> Verona
+Hautmont <-> Baihar
+Hautmont <-> Tongelre
+Hautmont <-> SanAndres
+Tondano <-> Malihabad
+Tondano <-> Bielawa
+Tondano <-> IgaracudoTiete
+Tondano <-> Aarschot
+Tondano <-> SantoTomas
+Tondano <-> VillaCanales
+Tondano <-> Yumbe
+Tondano <-> Verona
+Tondano <-> Orvault
+Tondano <-> Achhnera
+Leszno <-> Bangarapet
+Leszno <-> VillaCanales
+Leszno <-> Baytown
+Leszno <-> Verona
+Leszno <-> Tongelre
+Leszno <-> Achhnera
+Leszno <-> Bielawa
+Leszno <-> RichmondHill
+Leszno <-> SantoTomas
+Leszno <-> KampungPasirGudangBaru
+Leszno <-> Indergarh
+Leszno <-> Bagasra
+Leszno <-> Orvault
+Bangarapet <-> Baytown
+Bangarapet <-> Malihabad
+Bangarapet <-> Bielawa
+Bangarapet <-> KampungPasirGudangBaru
+Bangarapet <-> Ljubljana
+Bangarapet <-> Indergarh
+Bangarapet <-> Ciempozuelos
+Bangarapet <-> SanAndres
+Bangarapet <-> Karkala
+Bangarapet <-> Yumbe
+VillaCanales <-> Villanueva
+VillaCanales <-> SantoTomas
+VillaCanales <-> AlMahbulah
+VillaCanales <-> Yumbe
+VillaCanales <-> Kosaishi
+VillaCanales <-> Bagasra
+VillaCanales <-> SanAndres
+Baytown <-> Bagasra
+Baytown <-> Aarschot
+Baytown <-> SantoTomas
+Baytown <-> Ciempozuelos
+Baytown <-> Baihar
+Baytown <-> Yumbe
+AlMahbulah <-> Kosaishi
+AlMahbulah <-> Bielawa
+AlMahbulah <-> Villanueva
+AlMahbulah <-> RichmondHill
+AlMahbulah <-> Aarschot
+AlMahbulah <-> Ljubljana
+AlMahbulah <-> Ciempozuelos
+AlMahbulah <-> Orvault
+AlMahbulah <-> SanAndres
+AlMahbulah <-> Karkala
+Verona <-> Achhnera
+Verona <-> Bielawa
+Verona <-> Ljubljana
+Verona <-> Bagasra
+Verona <-> Ciempozuelos
+Verona <-> Orvault
+Verona <-> Yumbe
+Kosaishi <-> Villanueva
+Kosaishi <-> Aarschot
+Kosaishi <-> KampungPasirGudangBaru
+Kosaishi <-> Ciempozuelos
+Kosaishi <-> Baihar
+Kosaishi <-> SanAndres
+Baihar <-> Malihabad
+Baihar <-> Bielawa
+Baihar <-> Villanueva
+Baihar <-> Aarschot
+Baihar <-> SantoTomas
+Baihar <-> KampungPasirGudangBaru
+Baihar <-> Karkala
+Tongelre <-> Malihabad
+Tongelre <-> Bielawa
+Tongelre <-> Villanueva
+Tongelre <-> RichmondHill
+Tongelre <-> IgaracudoTiete
+Tongelre <-> Aarschot
+Tongelre <-> SantoTomas
+Tongelre <-> KampungPasirGudangBaru
+Tongelre <-> Ljubljana
+Tongelre <-> Bagasra
+Tongelre <-> SanAndres
+Tongelre <-> Karkala
+Achhnera <-> Malihabad
+Achhnera <-> RichmondHill
+Achhnera <-> Aarschot
+Achhnera <-> Indergarh
+Achhnera <-> Bagasra
+Achhnera <-> Ciempozuelos
+Achhnera <-> SanAndres
+Achhnera <-> Karkala
+Malihabad <-> IgaracudoTiete
+Malihabad <-> Aarschot
+Malihabad <-> SantoTomas
+Malihabad <-> SanAndres
+Malihabad <-> Karkala
+Bielawa <-> Villanueva
+Bielawa <-> RichmondHill
+Bielawa <-> Indergarh
+Bielawa <-> SanAndres
+Villanueva <-> Aarschot
+Villanueva <-> Bagasra
+Villanueva <-> Orvault
+RichmondHill <-> IgaracudoTiete
+RichmondHill <-> Aarschot
+RichmondHill <-> SantoTomas
+RichmondHill <-> Indergarh
+RichmondHill <-> Bagasra
+RichmondHill <-> Ciempozuelos
+RichmondHill <-> Orvault
+RichmondHill <-> Karkala
+IgaracudoTiete <-> SantoTomas
+IgaracudoTiete <-> Bagasra
+IgaracudoTiete <-> Orvault
+IgaracudoTiete <-> Yumbe
+Aarschot <-> KampungPasirGudangBaru
+Aarschot <-> Indergarh
+SantoTomas <-> Orvault
+SantoTomas <-> Yumbe
+KampungPasirGudangBaru <-> Indergarh
+KampungPasirGudangBaru <-> SanAndres
+KampungPasirGudangBaru <-> Karkala
+Ljubljana <-> Karkala
+Ljubljana <-> Yumbe
+Indergarh <-> Yumbe
+Indergarh <-> Orvault
+Indergarh <-> Karkala
+Bagasra <-> Orvault
+Bagasra <-> Karkala
+Ciempozuelos <-> Orvault
+Ciempozuelos <-> Karkala
+Ciempozuelos <-> Yumbe
+Orvault <-> Yumbe
+SanAndres <-> Yumbe

@@ -1,0 +1,5 @@
+import javax.swing.tree.DefaultTreeModel;
+
+public class Tree extends DefaultTreeModel {
+
+}

@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Problema {
+	private ArrayList<Integer> monete;
+	private int nMonete;
+
+	public Problema(int nM) {
+		// TODO Auto-generated constructor stub
+		monete = new ArrayList<Integer>();
+		setnMonete(nM);
+
+	}
+
+	public ArrayList<Integer> getMonete() {
+		return monete;
+	}
+
+	public void setMonete(ArrayList<Integer> monete) {
+		this.monete = monete;
+	}
+
+	public int getnMonete() {
+		return nMonete;
+	}
+
+	public void setnMonete(int nMonete) {
+		this.nMonete = nMonete;
+	}
+
+
+public void DivEqua() {
+	Collections.sort(monete);
+	System.out.println(monete);
+		
+	
+
+	
+
+
+}
+	
+	
+	
+	
+	
+
+}
+
+	
+
+	
+
+
+
+

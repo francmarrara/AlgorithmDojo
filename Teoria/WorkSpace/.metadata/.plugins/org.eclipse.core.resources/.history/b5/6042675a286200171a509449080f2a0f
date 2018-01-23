@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+public class Main {
+   
+    @SuppressWarnings("resource")
+    public static void main(String[] args) {
+   
+        Scanner scanner = new Scanner(System.in);
+       
+        Tree<Integer> Tr = new Tree<>();
+        Node<Integer> N1 = new Node<Integer>(scanner.nextInt());//leggo la radice
+        Tr.setRootElement(N1);//assegno la radice
+       
+        List<Node<Integer>> listaNodi = new ArrayList<>();
+       
+        listaNodi.add(N1);//aggiungo la radice alla lista
+       
+        while(scanner.hasNext()){
+           
+            Node<Integer> figlio = new Node<Integer>(scanner.nextInt());//leggo il nodo figlio
+           
+            if(figlio.getData() == -1)
+                break;
+           
+            scanner.next();
+           
+            Node<Integer> padre = new Node<Integer>(scanner.nextInt());//leggo il nodo padre
+           
+            Iterator<Node<Integer>> it = listaNodi.iterator();
+           
+            while(it.hasNext()){
+               
+                Node<Integer> p = it.next();
+               
+                if(p.getData() == padre.getData()){
+                   
+                    p.addChild(figlio);
+                    listaNodi.add(figlio);
+                    break;
+                   
+                }
+               
+            }
+           
+            scanner.next();
+           
+        }
+       
+        int somma = 0;
+        Iterator<Node<Integer>> it = listaNodi.iterator();
+       
+        //Per ogni nodo calcolo il conteggio del suo cammino totale
+        while(it.hasNext()){
+           
+            Node<Integer> nodoCorrente = it.next();
+           
+            somma = 0;
+           
+            List<Node<Integer>> cammino = new ArrayList<>();
+           
+            Tr.walk(nodoCorrente, cammino);
+           
+            for(Node<Integer> n : cammino){
+               
+                somma += n.getData();
+               
+            }
+           
+            somma -= nodoCorrente.getData();
+            System.out.println(nodoCorrente.getData() + " -> " + somma);//inserisco nella hashMap nodo e somma del cammino
+           
+        }
+       
+    }
+ 
+}

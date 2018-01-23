@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import org.jgrapht.alg.AllDirectedPaths;
+import org.jgrapht.alg.CycleDetector;
+import org.jgrapht.alg.cycle.HawickJamesSimpleCycles;
+import org.jgrapht.graph.DefaultEdge;
+
+@SuppressWarnings("deprecation")
+public class Test {
+
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		int nNodi;
+		int nRimossiMax;
+		nNodi = scanner.nextInt();
+		nRimossiMax = scanner.nextInt();
+		int Vertex1;
+		int Vertex2;
+		GrafoOrientato g = new GrafoOrientato(DefaultEdge.class);
+		for (int i = 1; i <= nNodi; i++) {
+			g.addVertex(i);
+		}
+
+		while (scanner.hasNext()) {
+			Vertex1 = scanner.nextInt();
+			Vertex2 = scanner.nextInt();
+			g.addEdge(Vertex1, Vertex2);
+
+		}
+
+		scanner.close();
+
+		CycleDetector<Integer, DefaultEdge> cd = new CycleDetector<>(g);
+		HawickJamesSimpleCycles<Integer, DefaultEdge> hcd = new HawickJamesSimpleCycles<>(g);
+		List<List<Integer>> cicli = hcd.findSimpleCycles();
+		List<DefaultEdge> rimossi = new ArrayList<DefaultEdge>();
+
+		System.out.println(g.toString());
+		System.out.println(g.NodiColl(1));
+
+		
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,256 @@
+import java.util.Collection;
+import java.util.Set;
+
+import org.jgrapht.EdgeFactory;
+import org.jgrapht.graph.DefaultDirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.specifics.Specifics;
+
+public class StringGrafoOrientato extends DefaultDirectedGraph<String,DefaultEdge> {
+
+	@Override
+	public Set<DefaultEdge> getAllEdges(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.getAllEdges(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public boolean isAllowingLoops() {
+		// TODO Auto-generated method stub
+		return super.isAllowingLoops();
+	}
+
+	@Override
+	public boolean isAllowingMultipleEdges() {
+		// TODO Auto-generated method stub
+		return super.isAllowingMultipleEdges();
+	}
+
+	@Override
+	public DefaultEdge getEdge(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.getEdge(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public EdgeFactory<String, DefaultEdge> getEdgeFactory() {
+		// TODO Auto-generated method stub
+		return super.getEdgeFactory();
+	}
+
+	@Override
+	public DefaultEdge addEdge(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.addEdge(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public boolean addEdge(String sourceVertex, String targetVertex, DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.addEdge(sourceVertex, targetVertex, e);
+	}
+
+	@Override
+	public boolean addVertex(String v) {
+		// TODO Auto-generated method stub
+		return super.addVertex(v);
+	}
+
+	@Override
+	public String getEdgeSource(DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.getEdgeSource(e);
+	}
+
+	@Override
+	public String getEdgeTarget(DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.getEdgeTarget(e);
+	}
+
+	@Override
+	public Object clone() {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+	@Override
+	public boolean containsEdge(DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.containsEdge(e);
+	}
+
+	@Override
+	public boolean containsVertex(String v) {
+		// TODO Auto-generated method stub
+		return super.containsVertex(v);
+	}
+
+	@Override
+	public int degreeOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.degreeOf(vertex);
+	}
+
+	@Override
+	public Set<DefaultEdge> edgeSet() {
+		// TODO Auto-generated method stub
+		return super.edgeSet();
+	}
+
+	@Override
+	public Set<DefaultEdge> edgesOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.edgesOf(vertex);
+	}
+
+	@Override
+	public int inDegreeOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.inDegreeOf(vertex);
+	}
+
+	@Override
+	public Set<DefaultEdge> incomingEdgesOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.incomingEdgesOf(vertex);
+	}
+
+	@Override
+	public int outDegreeOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.outDegreeOf(vertex);
+	}
+
+	@Override
+	public Set<DefaultEdge> outgoingEdgesOf(String vertex) {
+		// TODO Auto-generated method stub
+		return super.outgoingEdgesOf(vertex);
+	}
+
+	@Override
+	public DefaultEdge removeEdge(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.removeEdge(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public boolean removeEdge(DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.removeEdge(e);
+	}
+
+	@Override
+	public boolean removeVertex(String v) {
+		// TODO Auto-generated method stub
+		return super.removeVertex(v);
+	}
+
+	@Override
+	public Set<String> vertexSet() {
+		// TODO Auto-generated method stub
+		return super.vertexSet();
+	}
+
+	@Override
+	public double getEdgeWeight(DefaultEdge e) {
+		// TODO Auto-generated method stub
+		return super.getEdgeWeight(e);
+	}
+
+	@Override
+	public void setEdgeWeight(DefaultEdge e, double weight) {
+		// TODO Auto-generated method stub
+		super.setEdgeWeight(e, weight);
+	}
+
+	@Override
+	protected Specifics<String, DefaultEdge> createSpecifics() {
+		// TODO Auto-generated method stub
+		return super.createSpecifics();
+	}
+
+	@Override
+	protected Specifics<String, DefaultEdge> createUndirectedSpecifics() {
+		// TODO Auto-generated method stub
+		return super.createUndirectedSpecifics();
+	}
+
+	@Override
+	protected Specifics<String, DefaultEdge> createDirectedSpecifics() {
+		// TODO Auto-generated method stub
+		return super.createDirectedSpecifics();
+	}
+
+	@Override
+	public boolean containsEdge(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.containsEdge(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public boolean removeAllEdges(Collection<? extends DefaultEdge> edges) {
+		// TODO Auto-generated method stub
+		return super.removeAllEdges(edges);
+	}
+
+	@Override
+	public Set<DefaultEdge> removeAllEdges(String sourceVertex, String targetVertex) {
+		// TODO Auto-generated method stub
+		return super.removeAllEdges(sourceVertex, targetVertex);
+	}
+
+	@Override
+	public boolean removeAllVertices(Collection<? extends String> vertices) {
+		// TODO Auto-generated method stub
+		return super.removeAllVertices(vertices);
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+
+	@Override
+	protected boolean assertVertexExist(String v) {
+		// TODO Auto-generated method stub
+		return super.assertVertexExist(v);
+	}
+
+	@Override
+	protected boolean removeAllEdges(DefaultEdge[] edges) {
+		// TODO Auto-generated method stub
+		return super.removeAllEdges(edges);
+	}
+
+	@Override
+	protected String toStringFromSets(Collection<? extends String> vertexSet, Collection<? extends DefaultEdge> edgeSet,
+			boolean directed) {
+		// TODO Auto-generated method stub
+		return super.toStringFromSets(vertexSet, edgeSet, directed);
+	}
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public StringGrafoOrientato(EdgeFactory<String, DefaultEdge> ef) {
+		super(ef);
+		// TODO Auto-generated constructor stub
+	}
+
+}

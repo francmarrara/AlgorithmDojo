@@ -1,0 +1,11 @@
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
+
+public class Tree extends DefaultTreeModel {
+
+	public Tree(TreeNode arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+
+}
