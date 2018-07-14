@@ -7,21 +7,21 @@ import java.util.Scanner;
 
 public class Esame {
 
-	private int n,m;
-	private int mappa[][];
-	private ArrayList<Point> adiacenze=new ArrayList<>();
-	private int max=Integer.MIN_VALUE;
-	private ArrayList<Point> listaPicchi=new ArrayList<>();
-	private LinkedHashMap<Point,Integer> valori= new LinkedHashMap<Point,Integer>();
+	private int n,m;//grandezza matrice
+	private int mappa[][];//matrice di punti
+	private ArrayList<Point> adiacenze=new ArrayList<>();//arraylist che contiene i punti per il calcolo dell'intorno
+	private int max=Integer.MIN_VALUE; // il valore massimo di coperture
+	private ArrayList<Point> listaPicchi=new ArrayList<>(); // lista dei picchi trovati
+	private LinkedHashMap<Point,Integer> valori= new LinkedHashMap<Point,Integer>(); //hashmap dove il punto è la chiave e il valore sono le coperture picchi
 
 
 
 	public Esame() {
+		//costruttore come inizializzo trovo direttamente la soluzione
 		readInput();
 		//stampaInput();
 		settingAdiacenze();
 		solve();
-
 	}
 
 
@@ -37,12 +37,11 @@ public class Esame {
 		solution();
 	}
 
-
 	private void solution() {
-		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
+		//funzione dove calcolo la soluzione seguendo le regole della traccia
+		//prendo un picco lo controllo con gli altri picchi e controllo se esso è sulla stessa riga colonna o diagonale
+		//se lo è controllo se sia maggiore e incremento il contatore
 		int conta=0;
-
 		for(Point a:listaPicchi) {
 			for(Point b:listaPicchi) {
 				//				System.out.print("<"+a.x+","+a.y+">");		
@@ -62,47 +61,40 @@ public class Esame {
 				valori.replace(a, conta);
 			}
 			conta=0;
-
 		}
 		stampaSoluzione();
 	}
+	
 	private void stampaSoluzione() {
+		//funzione dove trovo il punto con più copertura di picchi
+		//la chiave è il punto il valore sono le coperture
 		Point trovato=new Point();
 		// TODO Auto-generated method stub
 		for(Point p:valori.keySet()) {
 			//			System.out.println(p.x+","+p.y+":"+valori.get(p));
 			if(max<valori.get(p)) {
-
 				max=valori.get(p);
 				trovato=p;
 			}
-
-
 		}
 		System.out.println("<"+trovato.x+","+trovato.y+">");		
-
 	}
 
-
-
-
-
-
 	private boolean checkPunti(int x, int y, int x2, int y2) {
-		// TODO Auto-generated method stub
-		if(x==x2) // stessa riga
+		//funzione per controllare se due punti sono:
+		//System.out.println("<"+x+","+y+"> <"+x2+","+y2+">");
+		if(x==x2) // sulla stessa riga
 			return true;
-		if(y==y2)// stessa colonna
+		if(y==y2)// sulla stessa colonna
 			return true;
-		if(x-y==x2-y2) //diagonale1
+		if((Math.abs(y-y2)==Math.abs(x-x2))) // stessa diagonale
 			return true;
-		if(x+y==x2+y2) //diagonale2
-			return true;
+		
 		return false;
 	}
 
 	private void iteraPoint(int x, int y) {
-		// TODO Auto-generated method stub
+		//funzione che controlla se il punto è un picco lo inserisco in una arraylist di picchi
 		int valore=0;
 		for(Point vicino:adiacenze) {
 			if(controlla(x,y,vicino)) {
@@ -114,43 +106,34 @@ public class Esame {
 		}
 
 	}
-
-
-
-
-
+	
 	private boolean controlla(int x, int y, Point vicino) {
-
+		//funzione per controllare che si sfori dalla matrice
 		if((x+vicino.x>=0 && y+vicino.y>=0)&&(x+vicino.x<n && y+vicino.y<m))
 			return true;
 		return false;
 	}
-
-
-
+	
 	private void readInput() {
-		// TODO Auto-generated method stub
-		Scanner scan=new Scanner(System.in);
-		String row=scan.nextLine();
-
-		String [] splittedRow=row.split(" ");
+		//funzione prelevare input
+		Scanner scan=new Scanner(System.in); // scanner per poter prelevare l'input
+		String row=scan.nextLine(); // prima riga dell'input
+		String [] splittedRow=row.split(" "); //splitto la riga siccome è del formato n spazio m
 		n=Integer.parseInt(splittedRow[0]);
 		m=Integer.parseInt(splittedRow[1]);
-		mappa=new int [n][m];
-
+		mappa=new int [n][m]; // inizializzo matrice con le grandezze 
 		for(int i=0;i<n;i++) {
-			row=scan.nextLine();
+			row=scan.nextLine(); //prendo la riga
 			for(int j=0;j<m;j++) {
-				splittedRow=row.split(" ");
-				mappa[i][j]=Integer.parseInt(splittedRow[j]);
+				splittedRow=row.split(" "); //splitto per spazio per prendere i numeri senza spazi
+				mappa[i][j]=Integer.parseInt(splittedRow[j]);//prendo il numero j della riga
 			}
 		}
-
-		scan.close();
+		scan.close(); //chiudo lo scanner
 	}
 
 	private void stampaInput() {
-		// TODO Auto-generated method stub
+		// funzione per controllare se l'input lo prendevo bene
 		System.out.print(n+" "+m);
 		for(int i=0;i<n;i++) {
 			for(int j=0;j<m;j++) {
@@ -159,10 +142,11 @@ public class Esame {
 			System.out.println();
 		}
 	}
+	
 	private void settingAdiacenze() {
-		// TODO Auto-generated method stub
-		//adianceze per controllare intorno picco
-
+		
+		// funzione per inizializzare le adianceze per controllare intorno picco
+		// l'intorno è stato calcolato guardando la traccia esame
 		adiacenze.add(new Point(0,-2)); //1
 		adiacenze.add(new Point(0,-1)); //2
 		adiacenze.add(new Point(1,-1)); //3
@@ -177,4 +161,5 @@ public class Esame {
 		adiacenze.add(new Point(0,2));//12
 
 	}
+
 }
