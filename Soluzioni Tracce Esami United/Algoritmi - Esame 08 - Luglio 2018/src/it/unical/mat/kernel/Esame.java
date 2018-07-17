@@ -3,7 +3,9 @@ package it.unical.mat.kernel;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Esame {
 
@@ -43,15 +45,8 @@ public class Esame {
 		//se lo è controllo se sia maggiore e incremento il contatore
 		int conta=0;
 		for(Point a:listaPicchi) {
-			for(Point b:listaPicchi) {
-				//				System.out.print("<"+a.x+","+a.y+">");		
-				//				System.out.println("<"+b.x+","+b.y+">");		
-				if(mappa[a.x][a.y]!=mappa[b.x][b.y]) {
-					if(checkPunti(a.x,a.y,b.x,b.y))
-						if(mappa[a.x][a.y]>mappa[b.x][b.y]) 
-							conta++;
-				}
-			}
+			//System.out.print("<"+a.x+","+a.y+">");		
+			conta=checkPunti(a.x,a.y);
 			//			System.out.println(conta);
 			if(!valori.containsKey(a)) {
 				if(conta!=0)
@@ -64,14 +59,14 @@ public class Esame {
 		}
 		stampaSoluzione();
 	}
-	
+
 	private void stampaSoluzione() {
 		//funzione dove trovo il punto con più copertura di picchi
 		//la chiave è il punto il valore sono le coperture
 		Point trovato=new Point();
 		// TODO Auto-generated method stub
 		for(Point p:valori.keySet()) {
-			//			System.out.println(p.x+","+p.y+":"+valori.get(p));
+			System.out.println(p.x+","+p.y+":"+valori.get(p));
 			if(max<valori.get(p)) {
 				max=valori.get(p);
 				trovato=p;
@@ -80,17 +75,77 @@ public class Esame {
 		System.out.println("<"+trovato.x+","+trovato.y+">");		
 	}
 
-	private boolean checkPunti(int x, int y, int x2, int y2) {
-		//funzione per controllare se due punti sono:
-		//System.out.println("<"+x+","+y+"> <"+x2+","+y2+">");
-		if(x==x2) // sulla stessa riga
-			return true;
-		if(y==y2)// sulla stessa colonna
-			return true;
-		if((Math.abs(y-y2)==Math.abs(x-x2))) // stessa diagonale
-			return true;
+	private int checkPunti(int x, int y) {
+		int valore=0;
+		Set<Point> vicini=new LinkedHashSet<Point>();//trovo i picchi vicini sulla riga colonna e le diagonali
+		//basso
+		for(int i=x+1;i<n;i++) {
+			if(listaPicchi.contains(new Point(i,y))){
+				vicini.add(new Point(i,y));
+				break;
+			}
+		}
+		//alto
+		for(int i=x-1;i>=0;i--) {
+			if(listaPicchi.contains(new Point(i,y))){
+				vicini.add(new Point(i,y));
+				break;
+
+			}
+		}
+		//destra
+		for(int i=y+1;i<n;i++) {
+			if(listaPicchi.contains(new Point(x,i))){
+				vicini.add(new Point(x,i));
+				break;
+			}
+		}
+		//sinistra
+		for(int i=y-1;i>=0;i--) {
+			if(listaPicchi.contains(new Point(x,i))){
+				vicini.add(new Point(x,i));
+				break;
+			}
+		}
+
+		//diagonale in basso a destra
+		for(int i=x+1,j=y+1;i<n && j<m;i++,j++) {
+			if(listaPicchi.contains(new Point(i,j))){
+				vicini.add(new Point(i,j));
+				break;
+			}
+		}
+		//diagonale in alto a sinistra
+		for(int i=x-1,j=y-1;i>=0 && j>=0;i--,j--) {
+			if(listaPicchi.contains(new Point(i,j))){
+				vicini.add(new Point(i,j));
+				break;
+			}
+		}
+
+		//diagonale basso a sinistra
+		for(int i=x-1,j=y+1;i>=0 && j<m;i--,j++) {
+			if(listaPicchi.contains(new Point(i,j))){
+				vicini.add(new Point(i,j));
+				break;
+			}
+		}
+		//diagonale in alto a destra
+		for(int i=x+1,j=y-1;i<n && j>=0;i++,j--) {
+			if(listaPicchi.contains(new Point(i,j))){
+				vicini.add(new Point(i,j));
+				break;
+			}
+		}
 		
-		return false;
+		for(Point a:vicini) {
+//			System.out.println("<"+x+","+y+">");
+//			System.out.println("<"+a.x+","+a.y+">");
+			if(mappa[x][y]>mappa[a.x][a.y])
+				valore++;
+//			System.out.println(valore);
+		}
+		return valore;
 	}
 
 	private void iteraPoint(int x, int y) {
@@ -106,14 +161,14 @@ public class Esame {
 		}
 
 	}
-	
+
 	private boolean controlla(int x, int y, Point vicino) {
 		//funzione per controllare che si sfori dalla matrice
 		if((x+vicino.x>=0 && y+vicino.y>=0)&&(x+vicino.x<n && y+vicino.y<m))
 			return true;
 		return false;
 	}
-	
+
 	private void readInput() {
 		//funzione prelevare input
 		Scanner scan=new Scanner(System.in); // scanner per poter prelevare l'input
@@ -142,9 +197,9 @@ public class Esame {
 			System.out.println();
 		}
 	}
-	
+
 	private void settingAdiacenze() {
-		
+
 		// funzione per inizializzare le adianceze per controllare intorno picco
 		// l'intorno è stato calcolato guardando la traccia esame
 		adiacenze.add(new Point(0,-2)); //1
